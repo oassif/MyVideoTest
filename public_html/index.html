@@ -12,10 +12,19 @@ and open the template in the editor.
         
         <!--window.plugins.vplayer.show({ videopath: "http://example.com/example.mp4" },{},{});-->
         <div id="fb-root">
-        <video width="320" height="240" autoplay>
+        <video width="320" height="240" id="example_video_1" autoplay>
             <source src="http://stavoren.milab.idc.ac.il/public_html/movies/father.mp4">
             Your browser does not support the video tag.
         </video>
+            
+            <script>
+ $( document ).ready(function() {
+   //This is on load , You can also use 'example_video_1' click event
+   var video = $('#example_video_1').get(0);
+   video.load();
+   video.play();
+ });
+</script>
         </div>
     </body>
 </html>
